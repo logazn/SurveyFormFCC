@@ -1,2 +1,2 @@
 # SurveyFormFCC
-Basic survey form 
+Survey form for free code camp challenge. 
