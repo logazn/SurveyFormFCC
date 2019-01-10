@@ -4,7 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Survey Form</title>
   </head>
-  <body></body>
+  <body>
+    <!-- css grid layout goes
+    labels in first column(left)
+  fields, checkboxes ect go in next column with input div  -->
+
+    <id class="title"><h1>Survey form</h1></id>
+    <div id="form-outer">
+      <p id="description">Let us know how we did</p>
+
+      <form id class="survey-form" method="GET">
+        <div class="labels">
+          <label id="name-label" for="name">* Full Name</label>
+        </div>
+        <div class="input-tab">
+          <input
+            class="input-field"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+            autofocus
+          />
+        </div>
+        <div class="labels">
+          <label id="email-label" for="email">* Email Address</label>
+        </div>
+        <div class="input-tab">
+          <input
+            class="input-field"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            autofocus
+          />
+        </div>
+        <div class="labels">
+          <label id="number-label" for="age">* Age: </label>
+        </div>
+
+        <div class="input-tab">
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="1"
+            max="125"
+            class="input-field"
+            placeholder="Select your Age"
+          />
+        </div>
+
+        <div class="labels">
+          <label for="currentPos"
+            >Which option best describes your current role?
+          </label>
+        </div>
+        <div class="input-tab">
+          <select id="dropdown" name="currentPos" class="input-field">
+            <option disabled value>Select an option</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="labels">
+          <label id="-label" for="email">* Email Address</label>
+        </div>
+        <div class="input-tab">
+          <input type="checkbox" value="Bike" /> I have a bike<br />
+          <input type="checkbox" value="Car" /> I have a car<br />
+          <input type="checkbox" value="Boat" checked /> I have a boat
+        </div>
+
+        <!-- end of form 
+           -->
+      </form>
+    </div>
+  </body>
 </html>

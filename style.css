@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Coiny");
+/* font import */
+
+html,
+body {
+  background-color: #a9d7d1;
+  font-family: "Coiny", cursive;
+  text-align: center;
+  align-content: center;
+}
+/* grid setup */
+#form-outer {
+  display: grid;
+
+  grid-template-columns: 1fr 0.9fr 1.1fr;
+  grid-template-rows: 0.9fr 1.1fr 1fr;
+  justify-items: center;
+  grid-template-areas: "labels " "labels  ." "labels  .";
+}
+
+.labels {
+  text-align: end;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: span 3;
+  grid-area: labels;
+}
+.input-tab {
+  grid-area: input-tab;
+}
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
