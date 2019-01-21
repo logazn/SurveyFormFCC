@@ -1,93 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Survey Form</title>
-  </head>
-  <body>
-    <!-- css grid layout goes
-    labels in first column(left)
-  fields, checkboxes ect go in next column with input div  -->
+<head>
+  <title>Survey form</title>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Lato:400,400i,700"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <id class="title"><h1>Survey form</h1></id>
-    <div id="form-outer">
-      <p id="description">Let us know how we did</p>
+<body>
+  <h1 id="title">Survey Form</h1>
+  <div class="container">
+    <p id="description">Tell us about yourself.</p>
+    <form id="survey-form" class="form-container" action="#">
+      <!-- Name -->
+      <div class="item-left"><p>Name:</p></div>
+      <div class="item-right">
+        <label for="name" id="name-label">
+          <input type="text" id="name" placeholder="Enter your name" required />
+        </label>
+      </div>
 
-      <form id class="survey-form" method="GET">
-        <div class="labels">
-          <label id="name-label" for="name">* Full Name</label>
-        </div>
-        <div class="input-tab">
+      <!-- Email -->
+      <div class="item-left"><p>Email:</p></div>
+      <div class="item-right">
+        <label for="email" id="email-label">
           <input
-            class="input-field"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-            autofocus
-          />
-        </div>
-        <div class="labels">
-          <label id="email-label" for="email">* Email Address</label>
-        </div>
-        <div class="input-tab">
-          <input
-            class="input-field"
-            type="text"
+            type="email"
             id="email"
-            name="email"
             placeholder="Enter your email"
             required
-            autofocus
           />
-        </div>
-        <div class="labels">
-          <label id="number-label" for="age">* Age: </label>
-        </div>
+        </label>
+      </div>
 
-        <div class="input-tab">
+      <!-- Age -->
+      <div class="item-left"><p>Age:</p></div>
+      <div class="item-right">
+        <label for="number" id="number-label">
           <input
             type="number"
-            name="age"
             id="number"
-            min="1"
-            max="125"
-            class="input-field"
-            placeholder="Select your Age"
+            placeholder="Enter your age 18+"
+            min="18"
+            Max="120"
+            required
           />
-        </div>
+        </label>
+      </div>
 
-        <div class="labels">
-          <label for="currentPos"
-            >Which option best describes your current role?
-          </label>
-        </div>
-        <div class="input-tab">
-          <select id="dropdown" name="currentPos" class="input-field">
-            <option disabled value>Select an option</option>
-            <option value="student">Student</option>
-            <option value="job">Full Time Job</option>
-            <option value="learner">Full Time Learner</option>
-            <option value="preferNo">Prefer not to say</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="labels">
-          <label id="-label" for="email">* Email Address</label>
-        </div>
-        <div class="input-tab">
-          <input type="checkbox" value="Bike" /> I have a bike<br />
-          <input type="checkbox" value="Car" /> I have a car<br />
-          <input type="checkbox" value="Boat" checked /> I have a boat
-        </div>
+      <!-- Alignment -->
+      <div class="item-left">
+        <p>What best describes your current alignment?</p>
+      </div>
+      <div class="item-right">
+        <select id="dropdown">
+          <option value="Lawful Good">Lawful Good</option>
+          <option value="Neutral Good">Neutral Good</option>
+          <option value="Chaotic Good">Chaotic Good</option>
+          <option value="Lawful Neutral">Lawful Neutral</option>
+          <option value="True Neutral" selected>True Neutral</option>
+          <option value="Chaotic Neutral">Chaotic Neutral</option>
+          <option value="Lawful Evil">Lawful Evil</option>
+          <option value="Neutral Evil">Neutral Evil</option>
+          <option value="Chaotic Evil">Chaotic Evil</option>
+        </select>
+      </div>
 
-        <!-- end of form 
-           -->
-      </form>
-    </div>
-  </body>
-</html>
+      <!-- Preferred Gaming Rig -->
+      <div class="item-left"><p>What's your preferred gaming platform?</p></div>
+      <div class="item-right">
+        <label for="pc">
+          <input type="radio" name="rig" value="pc" />PC/Mac/Linux
+        </label>
+        <label for="console">
+          <input type="radio" name="rig" value="console" />Console
+        </label>
+        <label for="mobile">
+          <input type="radio" name="rig" value="mobile" />Mobile
+        </label>
+      </div>
+
+      <!-- Platform Why -->
+
+      <!-- Preferred Genre -->
+      <div class="item-left"><p>What are your preferred gaming genres?</p></div>
+      <div class="item-right">
+        <label for="rpg">
+          <input type="checkbox" value="rpg" name="genre" />RPG
+        </label>
+        <label for="shooter">
+          <input type="checkbox" value="shooter" name="genre" />Shooter
+        </label>
+        <label for="Fighting">
+          <input type="checkbox" value="fighting" name="genre" />Fighting
+        </label>
+        <label for="platformer">
+          <input type="checkbox" value="platformer" name="genre" />Platformer
+        </label>
+        <label for="strategy">
+          <input type="checkbox" value="strategy" name="genre" />Strategy
+        </label>
+        <label for="mmo">
+          <input type="checkbox" value="mmo" name="genre" />MMO
+        </label>
+        <label for="sports">
+          <input type="checkbox" value="sports" name="genre" />Sports
+        </label>
+        <label for="casual">
+          <input type="checkbox" value="casual" name="genre" />Casual
+        </label>
+      </div>
+
+      <!-- Others -->
+      <div class="item-left"><p>Additional Comments:</p></div>
+      <div class="item-right">
+        <label for="comment-area">
+          <textarea name="comment-area"></textarea>
+        </label>
+      </div>
+
+      <!-- Submit Button-->
+      <div class="submit"><button id="submit">SUBMIT</button></div>
+    </form>
+  </div>
+</body>
